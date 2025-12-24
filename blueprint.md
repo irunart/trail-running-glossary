@@ -25,6 +25,15 @@ This project is a collaboration with [itra.run](https://itra.run) initiated duri
 - **Automation:** Content will be auto-compiled into different formats.
 - **Primary Output:** Mainly web hosting for easy access and reference.
 
+## Contribution Workflow
+We prioritize a user-friendly process for non-technical contributors using the GitHub Web UI.
+
+- **For New Terms:** Create a new file in `glossary/` using the standard naming convention (kebab-case), copy the template, and submit a Pull Request.
+- **For Edits:** Navigate to the existing term file, click the edit button, and propose changes via a Pull Request.
+- **Validation:** Automated scripts checks file format and data integrity on every submission.
+
+*For detailed step-by-step instructions, please see [CONTRIBUTING.md](CONTRIBUTING.md).*
+
 ## Architecture & Tech Stack
 To ensure data integrity and ease of use, we employ a Python-based pipeline with strict validation.
 
