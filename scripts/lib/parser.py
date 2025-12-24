@@ -1,5 +1,12 @@
 import os
 import re
+from .constants import (
+    ALLOWED_STATUSES,
+    REQUIRED_SECTIONS,
+    REQUIRED_META_FIELDS,
+    REQUIRED_LANG_FIELDS,
+    RESERVED_SECTIONS
+)
 
 class GlossaryError(Exception):
     def __init__(self, message, filename=None):
@@ -65,31 +72,26 @@ def parse_file(filepath):
                 key = field_match.group(1).replace('*', '').strip()
                 val = field_match.group(2).strip()
                 data[current_section][key] = val
-            # If it doesn't match a field but we are in a section, it might be a format error
-            # but we'll be lenient for now unless it's a required field that's missing later
 
     # 3. Validation Logic
-    required_sections = ["Meta", "English (EN)"]
-    for s in required_sections:
+    for s in REQUIRED_SECTIONS:
         if s not in data:
             raise SectionMissingError(s, filename)
 
     # Validate Meta fields
-    required_meta = ["Definition", "Category"]
-    for f in required_meta:
+    for f in REQUIRED_META_FIELDS:
         if f not in data["Meta"]:
             raise FieldMissingError("Meta", f, filename)
 
     # Validate Language sections (all H2s except Meta and the title)
-    ALLOWED_STATUSES = {"Draft", "Reviewed"}
     for section in data:
-        if section in ["title", "Meta"]:
+        if section in RESERVED_SECTIONS:
             continue
-        # Every language section must have a Term and Status
-        if "Term" not in data[section]:
-            raise FieldMissingError(section, "Term", filename)
-        if "Status" not in data[section]:
-            raise FieldMissingError(section, "Status", filename)
+            
+        # Every language section must have the required fields
+        for field in REQUIRED_LANG_FIELDS:
+             if field not in data[section]:
+                raise FieldMissingError(section, field, filename)
         
         status = data[section]["Status"]
         if status not in ALLOWED_STATUSES:

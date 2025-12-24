@@ -7,6 +7,7 @@ import csv
 sys.path.append(os.path.dirname(__file__))
 
 from lib.parser import parse_all, GlossaryError
+from lib.constants import RESERVED_SECTIONS
 
 def main():
     glossary_dir = "glossary"
@@ -33,7 +34,7 @@ def main():
         languages = set()
         for entry in data:
             for section in entry.keys():
-                if section not in ["title", "Meta"]:
+                if section not in RESERVED_SECTIONS:
                     languages.add(section)
         
         languages = sorted(list(languages))
