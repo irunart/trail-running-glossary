@@ -32,7 +32,7 @@ Curious about how we build a machine-readable, multi-format glossary from simple
 👉 **[View the Project Blueprint](blueprint.md)**
 
 ## Supported By
-This project is proudly hosted by the [irunart](https://github.com/irunart) open-source community, with technology infrastructure provided by **RunArt.Net**.
+This initiative unites the global expertise of [ITRA](https://itra.run) and [IEST](https://iest.run) with the technology of [RunArt.Net](https://runart.net). Together on [irunart@GitHub](https://github.com/irunart), we are mapping the language of our sport for everyone.
 
 ---
 *“To go fast, go alone. To go far, go together.”*
