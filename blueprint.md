@@ -91,15 +91,15 @@ We use a **Structured Markdown** approach to ensure it is human-readable and eas
 
 ## English (EN)
 - **Term:** [Term in English]
-- **Status:** [Official | Reviewed | Draft]
+- **Status:** [Reviewed | Draft]
 
 ## French (FR)
 - **Term:** [Term in French]
-- **Status:** [Official | Reviewed | Draft]
+- **Status:** [Reviewed | Draft]
 
 ## Spanish (ES)
 - **Term:** [Term in Spanish]
-- **Status:** [Official | Reviewed | Draft]
+- **Status:** [Reviewed | Draft]
 
 ## Chinese (ZH)
 - **Term:** [Term in Chinese]

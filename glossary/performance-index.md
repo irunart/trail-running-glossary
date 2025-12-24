@@ -9,15 +9,15 @@
 
 ## English (EN)
 - **Term:** Performance Index
-- **Status:** Official
+- **Status:** Reviewed
 
 ## French (FR)
 - **Term:** Cote
-- **Status:** Official
+- **Status:** Reviewed
 
 ## Spanish (ES)
 - **Term:** Index
-- **Status:** Official
+- **Status:** Reviewed
 
 ## Chinese (ZH)
 - **Term:** 表现分

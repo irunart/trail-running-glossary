@@ -81,6 +81,7 @@ def parse_file(filepath):
             raise FieldMissingError("Meta", f, filename)
 
     # Validate Language sections (all H2s except Meta and the title)
+    ALLOWED_STATUSES = {"Draft", "Reviewed"}
     for section in data:
         if section in ["title", "Meta"]:
             continue
@@ -89,6 +90,10 @@ def parse_file(filepath):
             raise FieldMissingError(section, "Term", filename)
         if "Status" not in data[section]:
             raise FieldMissingError(section, "Status", filename)
+        
+        status = data[section]["Status"]
+        if status not in ALLOWED_STATUSES:
+             raise FormatError(f"Invalid Status '{status}' in section '{section}'. Must be one of: {', '.join(sorted(ALLOWED_STATUSES))}", filename)
 
     return data
 

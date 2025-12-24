@@ -9,15 +9,15 @@
 
 ## English (EN)
 - **Term:** Score
-- **Status:** Official
+- **Status:** Reviewed
 
 ## French (FR)
 - **Term:** Score
-- **Status:** Official
+- **Status:** Reviewed
 
 ## Spanish (ES)
 - **Term:** Score
-- **Status:** Official
+- **Status:** Reviewed
 
 ## Chinese (ZH)
 - **Term:** 积分
