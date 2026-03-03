@@ -9,7 +9,7 @@ The initial contribution is made possible from the first-ever ITRA website trans
 Below is the list of first batch contributors in alphabetical order.
 
 *   [Boyu Wang](https://xhslink.com/m/2vAJvwYaKVW)
-*   Charlie Chen
+*   [Charlie Chen](https://github.com/Carolusian)
 *   [Chuanhao Liu](https://www.strava.com/athletes/21252268)
 *   [Junyi Pang](https://github.com/HuaaJi)
 *   [Ke Zhang](https://strava.app.link/fKGlWXhj90b)
